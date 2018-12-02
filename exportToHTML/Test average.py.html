@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>Test average.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #cc7832;}
+.s3 { color: #6897bb;}
+.s4 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Test average.py</font>
+</center></td></tr></table>
+<pre><span class="s0">#Average class grade</span>
+
+
+
+<span class="s2">def </span><span class="s1">calAverage(Score1</span><span class="s2">,</span><span class="s1">Score2</span><span class="s2">, </span><span class="s1">Score3</span><span class="s2">, </span><span class="s1">Score4</span><span class="s2">, </span><span class="s1">Score5</span><span class="s2">, </span><span class="s1">Score6</span><span class="s2">, </span><span class="s1">Score7</span><span class="s2">, </span><span class="s1">Score8</span><span class="s2">,</span><span class="s1">Score9</span><span class="s2">,</span><span class="s1">Score10 ):</span>
+    Average = (Score1 + Score2 + Score3 + Score4 + Score5 + Score6 + Score7 + Score8 + Score9 + Score10)
+<span class="s0">#Name of Students in class</span>
+
+
+#How grades are calculated
+<span class="s2">def </span><span class="s1">determineGrades(StudentScore):</span>
+    <span class="s2">if </span><span class="s1">(StudentScore &lt; </span><span class="s3">60</span><span class="s1">):</span>
+        <span class="s2">return </span><span class="s4">&quot;F&quot;</span>
+    <span class="s2">elif</span><span class="s1">(StudentScore &lt; </span><span class="s3">70</span><span class="s1">):</span>
+        <span class="s2">return </span><span class="s4">&quot;D&quot;</span>
+    <span class="s2">elif</span><span class="s1">(StudentScore &lt; </span><span class="s3">80</span><span class="s1">):</span>
+        <span class="s2">return </span><span class="s4">&quot;C&quot;</span>
+    <span class="s2">elif</span><span class="s1">(StudentScore &lt; </span><span class="s3">90</span><span class="s1">):</span>
+        <span class="s2">return </span><span class="s4">&quot;B&quot;</span>
+    <span class="s2">elif</span><span class="s1">(StudentScore &lt; </span><span class="s3">101</span><span class="s1">):</span>
+        <span class="s2">return </span><span class="s4">&quot;A&quot;</span>
+<span class="s0">#Get student test/grades score form user</span>
+<span class="s2">def </span><span class="s1">askforscores():</span>
+    Score1 = float ( input ( <span class="s4">&quot;Please enter score one&quot; </span><span class="s1">) )</span>
+    Score2 = float ( input ( <span class="s4">&quot;Please enter score two&quot; </span><span class="s1">) )</span>
+    Score3 = float ( input ( <span class="s4">&quot;Please enter score three&quot; </span><span class="s1">) )</span>
+    Score4 = float ( input ( <span class="s4">&quot;Please enter score four&quot; </span><span class="s1">) )</span>
+    Score5 = float ( input ( <span class="s4">&quot;Please enter score five&quot; </span><span class="s1">) )</span>
+    Score6 = float ( input ( <span class="s4">&quot;Please enter score six&quot; </span><span class="s1">) )</span>
+    Score7 = float ( input ( <span class="s4">&quot;Please enter score seven&quot; </span><span class="s1">) )</span>
+    Score8 = float ( input ( <span class="s4">&quot;Please enter score eight&quot; </span><span class="s1">) )</span>
+    Score9 = float ( input ( <span class="s4">&quot;Please enter score nine&quot; </span><span class="s1">) )</span>
+    Score10 = float ( input ( <span class="s4">&quot;Please enter score ten&quot; </span><span class="s1">) )</span>
+
+<span class="s0">#Get student names from user</span>
+
+#Pirnts test scores and hopefuly students as well
+
+<span class="s2">def </span><span class="s1">printTableofResults( Score1 </span><span class="s2">,</span><span class="s1">Score2</span><span class="s2">, </span><span class="s1">Score3 </span><span class="s2">, </span><span class="s1">Score4</span><span class="s2">, </span><span class="s1">Score5</span><span class="s2">, </span><span class="s1">Score6</span><span class="s2">, </span><span class="s1">Score7</span><span class="s2">, </span><span class="s1">Score8</span><span class="s2">,</span><span class="s1">Score9</span><span class="s2">,</span><span class="s1">Score10):</span>
+    print(<span class="s4">&quot;</span><span class="s2">\n</span><span class="s4">Score</span><span class="s2">\t </span><span class="s4">Letter Grade&quot;</span><span class="s2">,</span><span class="s1">)</span>
+    print(str(Score1)+<span class="s4">&quot;</span><span class="s2">\t</span><span class="s4">&quot;</span><span class="s1">+determineGrades(Score1)</span><span class="s2">,</span><span class="s1">str(Score2)+</span><span class="s4">&quot;</span><span class="s2">\t</span><span class="s4">&quot;</span><span class="s1">+determineGrades(Score2)</span><span class="s2">,</span><span class="s1">\</span>
+          str (Score3) + <span class="s4">&quot;</span><span class="s2">\t</span><span class="s4">&quot; </span><span class="s1">+ determineGrades (Score3)</span><span class="s2">,</span><span class="s1">str(Score4)+</span><span class="s4">&quot;</span><span class="s2">\t</span><span class="s4">&quot;</span><span class="s1">+determineGrades(Score4)</span><span class="s2">,</span><span class="s1">\</span>
+          str (Score5) + <span class="s4">&quot;</span><span class="s2">\t</span><span class="s4">&quot; </span><span class="s1">+ determineGrades (Score5)</span><span class="s2">,</span><span class="s1">str(Score6)+</span><span class="s4">&quot;</span><span class="s2">\t</span><span class="s4">&quot;</span><span class="s1">+determineGrades(Score6)</span><span class="s2">,</span><span class="s1">\</span>
+          str (Score7) + <span class="s4">&quot;</span><span class="s2">\t</span><span class="s4">&quot; </span><span class="s1">+ determineGrades (Score7)</span><span class="s2">,</span><span class="s1">str(Score8)+</span><span class="s4">&quot;</span><span class="s2">\t</span><span class="s4">&quot;</span><span class="s1">+determineGrades(Score8)</span><span class="s2">,</span><span class="s1">\</span>
+          str (Score9) + <span class="s4">&quot;</span><span class="s2">\t</span><span class="s4">&quot; </span><span class="s1">+ determineGrades (Score9)</span><span class="s2">,</span><span class="s1">str(Score10)+</span><span class="s4">&quot;</span><span class="s2">\t</span><span class="s4">&quot;</span><span class="s1">+determineGrades(Score10))</span>
+
+
+
+<span class="s0">#inputtable</span>
+<span class="s2">def </span><span class="s1">main() -&gt; object:</span>
+    Score1 <span class="s2">, </span><span class="s1">Score2 </span><span class="s2">, </span><span class="s1">Score3 </span><span class="s2">, </span><span class="s1">Score4 </span><span class="s2">, </span><span class="s1">Score5 </span><span class="s2">, </span><span class="s1">Score6 </span><span class="s2">, </span><span class="s1">Score7 </span><span class="s2">, </span><span class="s1">Score8 </span><span class="s2">, </span><span class="s1">Score9 </span><span class="s2">, </span><span class="s1">Score10 = askforscores()</span>
+    printTableofResults()
+
+main()
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>
